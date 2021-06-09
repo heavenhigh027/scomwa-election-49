@@ -1,6 +1,6 @@
 import React,{useEffect, useState,useParams} from "react";
 import ReactDOM from "react-dom";
-import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link, HashRouter as Router, Route, Switch } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import logo from './res/header.png';
 import "./styles.css";	
