@@ -28,7 +28,7 @@ const IndexPage = () => {
 		let fullName = herData['First name'].concat(" ",herData['Last name']); //merge string
 		tempMemID = initJSON(hisData,fullName);
 		//setMemID(tempMemID);
-		location.replace("/scomwa-election-49/about/".concat(tempMemID));	//edited 0104 : temp disable for debug		
+		location.replace("/about/".concat(tempMemID).concat("/"));	//edited 0104 : temp disable for debug		
 		}
 	return (	
 		<Form onSubmit={handleSubmit(onSubmit)}>
@@ -67,13 +67,13 @@ const IndexPage = () => {
 	};
 
 const AboutPage = ({ match, location }) => {
-	let aboutID = location["pathname"].replace("/scomwa-election-49/about/",'');
+	let aboutID = location["pathname"].replace("/about/",'');
 	return(
 		<>
 		<Row className="justify-content-md-center">
 		{aboutAction(aboutID)}
 		</Row>
-		<Link to="/scomwa-election-49"><Button variant="primary">กลับหน้าหลัก</Button></Link>
+		<Link to="/"><Button variant="primary">กลับหน้าหลัก</Button></Link>
 		</>
 		) 
 	};
@@ -123,12 +123,12 @@ function App() {
 		<Jumbotron style={{backgroundColor: "#FFFFFF"}}></Jumbotron>
 		<Container>
 			<Jumbotron style={{backgroundColor: "#91D8F9"}}>	
-				<a href="/scomwa-election-49"><img src={logo} className="img-fluid" alt="logo" /></a>
+				<a href="/"><img src={logo} className="img-fluid" alt="logo" /></a>
 				<h5> </h5>
 				<Router>
 					<Switch>
-						<Route exact path="/scomwa-election-49" component={IndexPage} />
-						<Route path="/scomwa-election-49/about" component={AboutPage} />
+						<Route exact path="/" component={IndexPage} />
+						<Route path="/about" component={AboutPage} />
 					</Switch>
 				</Router>			
 			</Jumbotron>
