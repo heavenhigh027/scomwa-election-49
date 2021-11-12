@@ -1,6 +1,6 @@
 import React,{useEffect, useState,useParams} from "react";
 import ReactDOM from "react-dom";
-import { Link, HashRouter as Router, Route, Switch } from "react-router-dom";
+import { Link, BrowserRouter as Router, Route, Switch  } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import logo from './res/header.png';
 import "./styles.css";	
@@ -28,7 +28,7 @@ const IndexPage = () => {
 		let fullName = herData['First name'].concat(" ",herData['Last name']); //merge string
 		tempMemID = initJSON(hisData,fullName);
 		//setMemID(tempMemID);
-		location.replace("/about/".concat(tempMemID).concat("/"));	//edited 0104 : temp disable for debug		
+		location.replace("/about/".concat(tempMemID));	//edited 0104 : temp disable for debug		
 		}
 	return (	
 		<Form onSubmit={handleSubmit(onSubmit)}>
@@ -36,7 +36,7 @@ const IndexPage = () => {
 			<Row className="justify-content-md-center">				
 				<Col xs md lg="8"><Form.Control 
 					type="text" 
-					placeholder="ชื่อ" 
+					placeholder="ระบุชื่อ (ไม่มีคำนำหน้า) เช่น  John " 
 					name="First name" 
 					title="ชื่อ"
 					ref={register({required: true, minLength: 1, maxLength: 32})} 
@@ -46,7 +46,7 @@ const IndexPage = () => {
 			<Row className="justify-content-md-center">				
 				<Col xs md lg="8"><Form.Control 
 					type="text" 
-					placeholder="นามสกุล" 
+					placeholder="ระบุนามสกุล เช่น Smith " 
 					name="Last name" 
 					ref={register({required: true, minLength: 1, maxLength: 32})} 
 					/></Col>			
@@ -55,7 +55,7 @@ const IndexPage = () => {
 			<Row className="justify-content-md-center">
 				<Col xs md lg="2"></Col>
 				<Col xs md lg="8">	
-					<Button type="submit"  variant="primary">ตรวจสอบข้อมูล</Button>
+					<Button type="submit" variant="primary" display="inline-block">ตรวจสอบข้อมูล</Button>
 					</Col>
 				<Col xs md lg="2"></Col>	
 			</Row>
@@ -80,19 +80,28 @@ const AboutPage = ({ match, location }) => {
 	
 function aboutAction(aboutID){
 	let aboutPoint;
-	//console.log("after phase = ",parseInt(aboutID));	
-	if(parseInt(aboutID) < 2134) aboutPoint = 1;
-	else	if(parseInt(aboutID) < 3880) aboutPoint = 2;
-		else 	if(parseInt(aboutID) < 5387) aboutPoint = 3;
-			else	if(parseInt(aboutID) < 7430) aboutPoint = 4;
-				else	if(parseInt(aboutID) < 8613) aboutPoint = 5;
-					else	if(parseInt(aboutID) < 9481) aboutPoint = 6;
-						else	if(parseInt(aboutID) < 10355) aboutPoint = 7;
-							else	if(parseInt(aboutID) < 11092) aboutPoint = 8;
-								else	if(parseInt(aboutID) < 11763) aboutPoint = 9;
-									else	if(parseInt(aboutID) < 12450) aboutPoint = 10;
-										else	if(parseInt(aboutID) < 13156) aboutPoint = 11;
-											else aboutPoint = 12;		
+	console.log("after phase = ",parseInt(aboutID));
+	console.log("phase length = ",aboutID.length);	
+	if(parseInt(aboutID) < 1693) aboutPoint = 1;
+	else	if(parseInt(aboutID) < 3029) aboutPoint = 2;
+		else 	if(parseInt(aboutID) < 4076) aboutPoint = 3;
+			else	if(parseInt(aboutID) < 5127) aboutPoint = 4;
+				else	if(parseInt(aboutID) < 5908) aboutPoint = 5;
+					else	if(parseInt(aboutID) < 7550) aboutPoint = 6;
+						else	if(parseInt(aboutID) < 8304) aboutPoint = 7;
+							else	if(parseInt(aboutID) < 8881) aboutPoint = 8;
+								else	if(parseInt(aboutID) < 9374) aboutPoint = 9;
+									else	if(parseInt(aboutID) < 9913) aboutPoint = 10;
+										else	if(parseInt(aboutID) < 10401) aboutPoint = 11;
+										else	if(parseInt(aboutID) < 10811) aboutPoint = 12;
+										else	if(parseInt(aboutID) < 11209) aboutPoint = 13;
+										else	if(parseInt(aboutID) < 11590) aboutPoint = 14;
+										else	if(parseInt(aboutID) < 11966) aboutPoint = 15;
+										else	if(parseInt(aboutID) < 12332) aboutPoint = 16;
+										else	if(parseInt(aboutID) < 12697) aboutPoint = 17;
+										else	if(parseInt(aboutID) < 13091) aboutPoint = 18;
+										else	if(parseInt(aboutID) < 13456) aboutPoint = 19;
+											else aboutPoint = 20;		
 	if(aboutID.length==5) return(
 		<>
 		<Table>
