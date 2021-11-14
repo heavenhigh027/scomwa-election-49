@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.js": "/scomwa-election-49/static/js/main.815c39ed.chunk.js",
-    "main.js.map": "/scomwa-election-49/static/js/main.815c39ed.chunk.js.map",
-    "runtime-main.js": "/scomwa-election-49/static/js/runtime-main.5aec067d.js",
-    "runtime-main.js.map": "/scomwa-election-49/static/js/runtime-main.5aec067d.js.map",
-    "static/js/2.6a2aa574.chunk.js": "/scomwa-election-49/static/js/2.6a2aa574.chunk.js",
-    "static/js/2.6a2aa574.chunk.js.map": "/scomwa-election-49/static/js/2.6a2aa574.chunk.js.map",
-    "index.html": "/scomwa-election-49/index.html",
-    "static/js/2.6a2aa574.chunk.js.LICENSE.txt": "/scomwa-election-49/static/js/2.6a2aa574.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.5dfdcc86.chunk.css",
+    "main.js": "/static/js/main.75288692.chunk.js",
+    "main.js.map": "/static/js/main.75288692.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.51b62a26.js",
+    "runtime-main.js.map": "/static/js/runtime-main.51b62a26.js.map",
+    "static/css/2.ebcf6dbc.chunk.css": "/static/css/2.ebcf6dbc.chunk.css",
+    "static/js/2.8af1d3c5.chunk.js": "/static/js/2.8af1d3c5.chunk.js",
+    "static/js/2.8af1d3c5.chunk.js.map": "/static/js/2.8af1d3c5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ebcf6dbc.chunk.css.map": "/static/css/2.ebcf6dbc.chunk.css.map",
+    "static/css/main.5dfdcc86.chunk.css.map": "/static/css/main.5dfdcc86.chunk.css.map",
+    "static/js/2.8af1d3c5.chunk.js.LICENSE.txt": "/static/js/2.8af1d3c5.chunk.js.LICENSE.txt",
+    "static/media/header.682cc226.png": "/static/media/header.682cc226.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5aec067d.js",
-    "static/js/2.6a2aa574.chunk.js",
-    "static/js/main.815c39ed.chunk.js"
+    "static/js/runtime-main.51b62a26.js",
+    "static/css/2.ebcf6dbc.chunk.css",
+    "static/js/2.8af1d3c5.chunk.js",
+    "static/css/main.5dfdcc86.chunk.css",
+    "static/js/main.75288692.chunk.js"
   ]
 }
